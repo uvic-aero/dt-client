@@ -16,15 +16,14 @@ import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import { mainListItems, secondaryListItems } from "./listItems";
+import { mainListItems } from "./listItems";
 
-function MadeWithLove() {
+function UvicAero() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {"Built with love by the "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
+      {"UVic Aero"}
+      <Link color="inherit" href="https://uvicaero.com/">
+        UVic Aero
       </Link>
       {" team."}
     </Typography>
@@ -150,13 +149,8 @@ export default function Dashboard() {
             noWrap
             className={classes.title}
           >
-            Dashboard
+            UVic Aero
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -173,15 +167,13 @@ export default function Dashboard() {
         </div>
         <Divider />
         <List>{mainListItems}</List>
-        <Divider />
-        <List>{secondaryListItems}</List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3} />
         </Container>
-        <MadeWithLove />
+        <UvicAero />
       </main>
     </div>
   );

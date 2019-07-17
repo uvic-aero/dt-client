@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard from "./aero-ui/Dashboard";
+import Dashboard from "aero-ui/Dashboard";
 
 const App = () => <Dashboard />;
 

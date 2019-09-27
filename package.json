@@ -15,13 +15,20 @@
   "scripts": {
     "start": "nf start -p 3000",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "electron": "electron .",
     "electron-start": "node src/start-react",
     "react-start": "BROWSER=none react-scripts start",
     "pack": "build --dir",
-    "dist": "npm run build && build"
+    "dist": "npm run build && build",
+    "lint": "eslint src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test",
+      "pre-push": "npm run lint && npm test"
+    }
   },
   "build": {
     "appId": "com.electron.electron-with-create-react-app",
@@ -48,6 +55,8 @@
     ]
   },
   "devDependencies": {
-    "electron": "^5.0.1"
+    "cross-env": "^6.0.0",
+    "electron": "^5.0.1",
+    "husky": "^3.0.5"
   }
 }

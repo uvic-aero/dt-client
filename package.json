@@ -6,6 +6,7 @@
     "@material-ui/core": "^4.0.0-rc.0",
     "@material-ui/icons": "^4.0.0",
     "foreman": "^3.0.1",
+    "lint-staged": "^9.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
@@ -22,17 +23,19 @@
     "react-start": "BROWSER=none react-scripts start",
     "pack": "build --dir",
     "dist": "npm run build && build",
-    "lint": "eslint src",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "lint": "eslint src -c .eslintrc.json --ext js,jsx"
   },
-  "pre-commit": [
-    "precommit-msg",
-    "lint"
-  ],
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint"
+    ],
+    "src/**/*.{js,jsx,json,md}": [
+      "prettier --list-different"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm test",
-      "pre-push": "npm run lint && npm test"
+      "pre-commit": "lint-staged"
     }
   },
   "build": {

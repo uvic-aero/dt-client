@@ -8,6 +8,5 @@ The desktop client is a React application built with [create-react-app](https://
 
 ## Setup
 
-1. `npm install` sets up the react+electron application
-2. `npm start` will start up the React app on http://localhost:3000/
-3. `npm run electron` will start up the electron app pointing at http://localhost:3000/
+1. `npm install` installs dependencies for the react-electron application
+2. `npm start` starts the electron-react desktop app

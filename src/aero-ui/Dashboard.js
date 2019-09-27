@@ -109,7 +109,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Dashboard() {
+const Dashboard = props => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -169,8 +169,11 @@ export default function Dashboard() {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3} />
         </Container>
-        <UvicAero />
+        {/** CHILD COMPONENTS */}
+        {props.children}
       </main>
     </div>
   );
-}
+};
+
+export default Dashboard;

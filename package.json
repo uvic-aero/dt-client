@@ -25,7 +25,10 @@
     "lint": "eslint src",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
-  "pre-commit": [ "precommit-msg", "lint" ],
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint && npm test",

@@ -22,8 +22,10 @@
     "react-start": "BROWSER=none react-scripts start",
     "pack": "build --dir",
     "dist": "npm run build && build",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "pre-commit": [ "precommit-msg", "lint" ],
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint && npm test",

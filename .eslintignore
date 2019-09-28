@@ -1,0 +1,7 @@
+src/serviceWorker.js
+node_modules/*
+public/*
+build/*
+config/*
+start-react.js
+electron-starter.js

@@ -7,18 +7,16 @@ import ImageQueueIcon from '@material-ui/icons/PhotoSizeSelectActual'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 
 const listIcons = [
-    { item: DashboardIcon, text: 'Dashboard' },
-    { item: ImageQueueIcon, text: 'Image Queue' },
-    { item: LocationOnIcon, text: 'Map' },
+    { item: <DashboardIcon />, text: 'Dashboard' },
+    { item: <ImageQueueIcon />, text: 'Image Queue' },
+    { item: <LocationOnIcon />, text: 'Map' },
 ]
 
-const ListItems = listIcons.map(icon => (
+const DrawerItems = listIcons.map(icon => (
     <ListItem button>
         <ListItemIcon>{icon.item}</ListItemIcon>
         <ListItemText primary={icon.text} />
     </ListItem>
 ))
-
-const DrawerItems = () => ({ ListItems })
 
 export default DrawerItems

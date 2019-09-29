@@ -15,7 +15,6 @@
         "eslint-plugin-prettier": "^3.1.1",
         "eslint-plugin-react": "^7.14.3",
         "foreman": "^3.0.1",
-        "lint-staged": "^9.4.0",
         "prop-types": "^15.7.2",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
@@ -76,7 +75,8 @@
         "cross-env": "^6.0.0",
         "electron": "^5.0.1",
         "husky": "^3.0.7",
+        "lint-staged": "^9.4.0",
         "pre-commit": "^1.2.2",
-        "prettier": "1.18.2"
+        "prettier": "^1.18.2"
     }
 }

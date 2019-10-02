@@ -31,8 +31,7 @@
         "react-start": "BROWSER=none react-scripts start",
         "pack": "build --dir",
         "dist": "npm run build && build",
-        "lint": "eslint src -c .eslintrc.json --ext js,jsx",
-        "lint:fix": "eslint --fix src/**/*.js"
+        "lint": "eslint src -c .eslintrc.json --ext js,jsx"
     },
     "husky": {
         "hooks": {

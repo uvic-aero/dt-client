@@ -43,7 +43,7 @@
             "eslint --fix src/*.js"
         ],
         "*.{js,jsx,json,md}": [
-            "prettier --list-different"
+            "prettier"
         ]
     },
     "build": {

@@ -34,6 +34,11 @@
         "lint": "eslint src -c .eslintrc.json --ext js,jsx",
         "lint:fix": "eslint --fix src/**/*.js"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
     "lint-staged": {
         "src/**/*.{js,jsx}": [
             "eslint --fix src/**/*.js"
@@ -41,11 +46,6 @@
         "src/**/*.{js,jsx,json,md}": [
             "prettier --list-different"
         ]
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
     },
     "build": {
         "appId": "com.electron.electron-with-create-react-app",

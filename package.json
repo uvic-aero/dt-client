@@ -44,6 +44,7 @@
             "eslint --fix src/*.js"
         ],
         "*.{js,jsx,json,md}": [
+            "prettier --check",
             "prettier"
         ]
     },

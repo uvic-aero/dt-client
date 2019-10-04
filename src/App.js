@@ -10,8 +10,8 @@ const UvicAero = () => {
             <Link color="inherit" href="https://uvicaero.com/" target="_blank">
                 UVic Aero
             </Link>
-            {' teams.'}
-        
+
+            {' teams.'}        
 		</Typography>
     )
 }

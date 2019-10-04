@@ -4,7 +4,7 @@ The desktop client's purpose is to interface and visualize telemetry data obtain
 the microcontrollers onboard UAVs and UGVs
 
 The desktop client is a React application built with [create-react-app](https://github.com/facebook/create-react-app). It is wrapped in an
-[electron](https://electronjs.org/) app that allows the React app to be ran in a desktop application.
+[electron](https://electronjs.org/) app that allows the React app to be run in a desktop application.
 
 This is the [tutorial that I used](https://flaviocopes.com/react-electron/) to set up this app.
 
@@ -12,7 +12,7 @@ This is the [tutorial that I used](https://flaviocopes.com/react-electron/) to s
 * `npm version 6.11.3` or higher
 * `node version v12.10.0` or higher
 * `git version 2.23.0` this is for husky, and lower versions may be acceptable.
-Ff your version of git is too old, you'll get an error when running `npm install`
+If your version of git is too old, you'll get an error when running `npm install`
 
 ## Getting started
 1. Clone the repo with `git clone https://github.com/uvic-aero/dt-client.git`

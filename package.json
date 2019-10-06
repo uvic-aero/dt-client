@@ -75,7 +75,6 @@
     "devDependencies": {
         "cross-env": "^6.0.0",
         "electron": "^5.0.1",
-        "history": "^4.10.1",
         "husky": "^1.0.0-rc.13",
         "lint-staged": "^9.4.1",
         "prettier": "^1.18.2"

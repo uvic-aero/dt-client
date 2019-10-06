@@ -36,15 +36,16 @@ const Sidebar = ({
             <Divider />
             <List>
                 {routes.map(route => (
-                    <ListItem button key={route.id}>
-                        <Link
-                            to={route.path}
-                            style={{ textDecoration: 'none' }}
-                        >
+                    <Link
+                        to={route.path}
+                        style={{ textDecoration: 'none', color: '#0000008a' }}
+                        key={route.id}
+                    >
+                        <ListItem button>
                             <ListItemIcon>{route.icon}</ListItemIcon>
                             <ListItemText primary={route.sidebarName} />
-                        </Link>
-                    </ListItem>
+                        </ListItem>
+                    </Link>
                 ))}
             </List>
         </Drawer>

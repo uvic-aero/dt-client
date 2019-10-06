@@ -5,29 +5,31 @@ import {
     LocationOn,
 } from '@material-ui/icons'
 
-import TestComponent from 'TestComponent'
+import TestHome from 'TestHome'
+import TestImageView from 'TestImageView'
+import TestMap from 'TestMap'
 
 const routes = [
     {
         id: 'dashboard',
-        path: '/',
+        path: '/dashboard',
         sidebarName: 'Dashboard',
         icon: <Dashboard />,
-        component: TestComponent,
+        component: TestHome,
     },
     {
         id: 'image-view',
         path: '/image-view',
         sidebarName: 'Image View',
         icon: <PhotoSizeSelectActual />,
-        component: TestComponent,
+        component: TestImageView,
     },
     {
         id: 'map',
         path: '/map',
         sidebarName: 'Map',
         icon: <LocationOn />,
-        component: TestComponent,
+        component: TestMap,
     },
 ]
 

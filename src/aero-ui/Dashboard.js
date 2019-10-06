@@ -10,7 +10,8 @@ import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import MenuIcon from '@material-ui/icons/Menu'
 import Sidebar from 'aero-ui/Sidebar'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Button from '@material-ui/core/Button'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import routes from 'router'
 
 const drawerWidth = 240
@@ -127,15 +128,26 @@ const Dashboard = () => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Typography
-                            component="h1"
-                            variant="h6"
-                            color="inherit"
-                            noWrap
-                            className={classes.title}
-                        >
-                            UVic Aero
-                        </Typography>
+
+                        <Button style={{ color: 'white' }}>
+                            <Link
+                                to="/"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'white',
+                                }}
+                            >
+                                <Typography
+                                    component="h1"
+                                    variant="h6"
+                                    color="inherit"
+                                    noWrap
+                                    className={classes.title}
+                                >
+                                    UVic Aero
+                                </Typography>
+                            </Link>
+                        </Button>
                     </Toolbar>
                 </AppBar>
                 <Sidebar
@@ -151,7 +163,7 @@ const Dashboard = () => {
                     <Container maxWidth="lg" className={classes.container}>
                         <Grid container spacing={3} />
                     </Container>
-                    {/** CHILD COMPONENTS */}
+                    {/** ROUTES FOR APP COMPONENTS */}
                     {routes.map(route => (
                         <Route
                             key={route.id}

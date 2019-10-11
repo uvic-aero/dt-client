@@ -1,4 +1,5 @@
 import React from 'react'
 
-const ImageView = () => "ImageView Component";
+//Parameter is recieved from the ground vehicle
+const ImageView = (image) => "ImageView Component";
 export default ImageView

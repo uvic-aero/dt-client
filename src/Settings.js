@@ -39,9 +39,31 @@ const resolution = [
         label: '360p',
     },
 ]
-const userSettings = require('../src/userSettings.json')
 
 const AppSettings = () => {
+    // Deafult values for our settings
+    const defaultSettings = {
+        OBC: 'Foo',
+        VSP: 'Bat',
+        pixhawkPort: 'Bar',
+        streamResolution: '360',
+    }
+    // Check if the settings file exists
+    if (!fs.existsSync('userSettings.json')) {
+        // Create it with default values if it doesnt
+        fs.writeFileSync(
+            'userSettings.json',
+            JSON.stringify(defaultSettings),
+            err => {
+                if (err) throw err
+            }
+        )
+    }
+    // Read user Settings
+    const userSettings = JSON.parse(
+        fs.readFileSync('userSettings.json', 'utf8')
+    )
+
     const classes = settingStyles()
     const [values, setValues] = React.useState({
         OBC: userSettings.OBC,
@@ -50,11 +72,14 @@ const AppSettings = () => {
         streamResolution: userSettings.streamResolution,
     })
     const handleChange = name => event => {
-        setValues({ ...values, [name]: event.target.value })
+        setValues({
+            ...values,
+            [name]: event.target.value,
+        })
     }
-
+    // Save any changes to the setting values
     const saveChanges = () => {
-        fs.writeFile('src/userSettings.json', JSON.stringify(values), err => {
+        fs.writeFile('userSettings.json', JSON.stringify(values), err => {
             if (err) throw err
         })
     }
@@ -67,8 +92,8 @@ const AppSettings = () => {
                 color="primary"
                 gutterBottom
             >
-                Settings
-            </Typography>
+                Settings{' '}
+            </Typography>{' '}
             <TextField
                 id="OBC"
                 label="OBC Address"
@@ -109,17 +134,18 @@ const AppSettings = () => {
             >
                 {resolution.map(option => (
                     <MenuItem key={option.value} value={option.value}>
-                        {option.label}
+                        {' '}
+                        {option.label}{' '}
                     </MenuItem>
-                ))}
-            </TextField>
+                ))}{' '}
+            </TextField>{' '}
             <Button
                 variant="contained"
                 className={classes.settingButton}
                 onClick={saveChanges}
             >
-                Save Settings
-            </Button>
+                Save Settings{' '}
+            </Button>{' '}
         </Box>
     )
 }

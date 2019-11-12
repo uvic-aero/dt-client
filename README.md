@@ -23,7 +23,7 @@ If your version of git is too old, you'll get an error when running `npm install
     * `brew install node`
   * Linux: 
     * `sudo apt update` followed by  
-    * `sudo apt install` and finally,
+    * `sudo apt install nodejs` and finally,
     * verify your version is up to date with `nodejs --version`
 4. Install npm
   * OSX: 

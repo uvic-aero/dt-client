@@ -1,20 +1,20 @@
-import React from 'react'
-import clsx from 'clsx'
-import { makeStyles } from '@material-ui/core/styles'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
-import IconButton from '@material-ui/core/IconButton'
-import Container from '@material-ui/core/Container'
-import Grid from '@material-ui/core/Grid'
-import MenuIcon from '@material-ui/icons/Menu'
-import Sidebar from 'aero-ui/Sidebar'
-import Button from '@material-ui/core/Button'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import routes from 'router'
+import React from 'react';
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import MenuIcon from '@material-ui/icons/Menu';
+import Sidebar from 'aero-ui/Sidebar';
+import Button from '@material-ui/core/Button';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import routes from 'router';
 
-const drawerWidth = 240
+const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -93,17 +93,17 @@ const useStyles = makeStyles(theme => ({
     fixedHeight: {
         height: 240,
     },
-}))
+}));
 
 const Dashboard = () => {
-    const classes = useStyles()
-    const [open, setOpen] = React.useState(true)
+    const classes = useStyles();
+    const [open, setOpen] = React.useState(true);
     const handleDrawerOpen = () => {
-        setOpen(true)
-    }
+        setOpen(true);
+    };
     const handleDrawerClose = () => {
-        setOpen(false)
-    }
+        setOpen(false);
+    };
     return (
         <Router>
             <div className={classes.root}>
@@ -174,7 +174,7 @@ const Dashboard = () => {
                 </main>
             </div>
         </Router>
-    )
-}
+    );
+};
 
-export default Dashboard
+export default Dashboard;

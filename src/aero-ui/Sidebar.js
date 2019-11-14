@@ -1,16 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, withRouter } from 'react-router-dom'
-import IconButton from '@material-ui/core/IconButton'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import ChevronLeft from '@material-ui/icons/ChevronLeft'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, withRouter } from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import ChevronLeft from '@material-ui/icons/ChevronLeft';
 
-import Drawer from '@material-ui/core/Drawer'
-import Divider from '@material-ui/core/Divider'
-import clsx from 'clsx'
-import List from '@material-ui/core/List'
+import Drawer from '@material-ui/core/Drawer';
+import Divider from '@material-ui/core/Divider';
+import clsx from 'clsx';
+import List from '@material-ui/core/List';
 
 const Sidebar = ({
     routes,
@@ -49,8 +49,8 @@ const Sidebar = ({
                 ))}
             </List>
         </Drawer>
-    )
-}
+    );
+};
 
 Sidebar.propTypes = {
     routes: PropTypes.instanceOf(Array).isRequired,
@@ -59,6 +59,6 @@ Sidebar.propTypes = {
     drawerPaperClose: PropTypes.string.isRequired,
     toolbarIcon: PropTypes.string.isRequired,
     handleDrawerClose: PropTypes.func.isRequired,
-}
+};
 
-export default withRouter(Sidebar)
+export default withRouter(Sidebar);

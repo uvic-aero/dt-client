@@ -1,6 +1,6 @@
 {
     "extends": ["airbnb", "prettier", "prettier/react"],
-    "semi": [2, "always"],
+
     "plugins": ["react", "prettier"],
     "rules": {
         "react/jsx-filename-extension": [
@@ -10,7 +10,8 @@
             }
         ],
         "prettier/prettier": "error",
-        "max-len": ["error", 80]
+        "max-len": ["error", 80],
+        "semi": [2, "always"]
     },
     "env": {
         "browser": true,

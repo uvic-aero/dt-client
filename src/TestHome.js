@@ -1,6 +1,6 @@
-import React from 'react'
-import Typography from '@material-ui/core/Typography'
-import UILink from '@material-ui/core/Link'
+import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import UILink from '@material-ui/core/Link';
 
 const TestHome = () => {
     return (
@@ -13,7 +13,7 @@ const TestHome = () => {
                 UVic Aero
             </UILink>
         </Typography>
-    )
-}
+    );
+};
 
-export default TestHome
+export default TestHome;

@@ -50,7 +50,7 @@ const AppSettings = () => {
     // File where the setting values are/will be held
     const FileName = 'userSettings.json';
 
-    // Defualt values for our settings
+    // Default values for our settings
     const defaultSettings = {
         OBC: '0.0.0.0',
         VSP: '5001',

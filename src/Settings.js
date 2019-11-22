@@ -1,8 +1,14 @@
-import React from 'react'
-import { TextField, MenuItem, Typography, Box, Button } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
+import React from 'react';
+import {
+    TextField,
+    MenuItem,
+    Typography,
+    Box,
+    Button,
+} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-const fs = window.require('fs')
+const fs = window.require('fs');
 
 const settingStyles = makeStyles(theme => ({
     root: {
@@ -19,7 +25,7 @@ const settingStyles = makeStyles(theme => ({
         marginLeft: 10,
         marginTop: 10,
     },
-}))
+}));
 
 const resolution = [
     {
@@ -38,11 +44,11 @@ const resolution = [
         value: '360',
         label: '360p',
     },
-]
+];
 
 const AppSettings = () => {
     // File where the setting values are/will be held
-    const FileName = 'userSettings.json'
+    const FileName = 'userSettings.json';
 
     // Defualt values for our settings
     const defaultSettings = {
@@ -50,36 +56,36 @@ const AppSettings = () => {
         VSP: '5001',
         pixhawkPort: '5002',
         streamResolution: '360',
-    }
+    };
     // Check if the settings file exists
     if (!fs.existsSync(FileName)) {
         // Create it with default values if it doesnt
         fs.writeFileSync(FileName, JSON.stringify(defaultSettings), err => {
-            if (err) throw err
-        })
+            if (err) throw err;
+        });
     }
     // Read user Settings
-    const userSettings = JSON.parse(fs.readFileSync(FileName, 'utf8'))
+    const userSettings = JSON.parse(fs.readFileSync(FileName, 'utf8'));
 
-    const classes = settingStyles()
+    const classes = settingStyles();
     const [values, setValues] = React.useState({
         OBC: userSettings.OBC,
         VSP: userSettings.VSP,
         pixhawkPort: userSettings.pixhawkPort,
         streamResolution: userSettings.streamResolution,
-    })
+    });
     const handleChange = name => event => {
         setValues({
             ...values,
             [name]: event.target.value,
-        })
-    }
+        });
+    };
     // Save any changes to the setting values
     const saveChanges = () => {
         fs.writeFile(FileName, JSON.stringify(values), err => {
-            if (err) throw err
-        })
-    }
+            if (err) throw err;
+        });
+    };
 
     return (
         <Box p={2} mt={-6} className={classes.root}>
@@ -144,7 +150,7 @@ const AppSettings = () => {
                 Save Settings{' '}
             </Button>{' '}
         </Box>
-    )
-}
+    );
+};
 
-export default AppSettings
+export default AppSettings;

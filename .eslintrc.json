@@ -1,5 +1,6 @@
 {
     "extends": ["airbnb", "prettier", "prettier/react"],
+
     "plugins": ["react", "prettier"],
     "rules": {
         "react/jsx-filename-extension": [
@@ -9,7 +10,8 @@
             }
         ],
         "prettier/prettier": "error",
-        "max-len": ["error", 80]
+        "max-len": ["error", 80],
+        "react/destructuring-assignment": [0, "never"]
     },
     "env": {
         "browser": true,

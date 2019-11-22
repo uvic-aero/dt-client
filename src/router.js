@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 import {
     Dashboard,
     PhotoSizeSelectActual,
     LocationOn,
     Settings,
-} from '@material-ui/icons'
+} from '@material-ui/icons';
 
-import TestHome from 'TestHome'
-import TestImageView from 'TestImageView'
-import TestMap from 'TestMap'
-import AppSettings from './Settings'
+import TestHome from 'TestHome';
+import TestImageView from 'TestImageView';
+import TestMap from 'TestMap';
+import AppSettings from './Settings';
 
 const routes = [
     {
@@ -40,6 +40,6 @@ const routes = [
         icon: <Settings />,
         component: AppSettings,
     },
-]
+];
 
-export default routes
+export default routes;

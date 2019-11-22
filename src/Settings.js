@@ -41,28 +41,25 @@ const resolution = [
 ]
 
 const AppSettings = () => {
-    // Deafult values for our settings
+    // File where the setting values are/will be held
+    const FileName = 'userSettings.json'
+
+    // Defualt values for our settings
     const defaultSettings = {
-        OBC: 'Foo',
-        VSP: 'Bat',
-        pixhawkPort: 'Bar',
+        OBC: '0.0.0.0',
+        VSP: '5001',
+        pixhawkPort: '5002',
         streamResolution: '360',
     }
     // Check if the settings file exists
-    if (!fs.existsSync('userSettings.json')) {
+    if (!fs.existsSync(FileName)) {
         // Create it with default values if it doesnt
-        fs.writeFileSync(
-            'userSettings.json',
-            JSON.stringify(defaultSettings),
-            err => {
-                if (err) throw err
-            }
-        )
+        fs.writeFileSync(FileName, JSON.stringify(defaultSettings), err => {
+            if (err) throw err
+        })
     }
     // Read user Settings
-    const userSettings = JSON.parse(
-        fs.readFileSync('userSettings.json', 'utf8')
-    )
+    const userSettings = JSON.parse(fs.readFileSync(FileName, 'utf8'))
 
     const classes = settingStyles()
     const [values, setValues] = React.useState({
@@ -79,7 +76,7 @@ const AppSettings = () => {
     }
     // Save any changes to the setting values
     const saveChanges = () => {
-        fs.writeFile('userSettings.json', JSON.stringify(values), err => {
+        fs.writeFile(FileName, JSON.stringify(values), err => {
             if (err) throw err
         })
     }
